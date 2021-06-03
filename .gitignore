@@ -1,16 +1,20 @@
-#/public/css/
+public/
+public/css/
 #!/public/css/style.css
 /public/css/app.css
 
-#/public/js/
+public/js/
 #!/public/js/script.js
 /public/js/app.js
 /public/js/edit-page.js
+
+public/fonts
 
 /public/.well-known
 
 /public/images
 /public/img
+/public/voyager-assets
 
 package-lock.json
 
