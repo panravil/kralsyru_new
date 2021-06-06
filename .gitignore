@@ -16,6 +16,11 @@ public/fonts
 /public/img
 /public/voyager-assets
 
+public/.htaccess
+storage/app/
+storage/framework/
+storage/logs/
+
 package-lock.json
 
 # Created by https://www.gitignore.io/api/vim,node,linux,macos,windows,laravel,intellij,sublimetext,visualstudio,visualstudiocode,composer
