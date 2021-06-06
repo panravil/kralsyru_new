@@ -22,6 +22,7 @@ storage/framework/
 storage/logs/
 
 package-lock.json
+hooks/hooks.json
 
 # Created by https://www.gitignore.io/api/vim,node,linux,macos,windows,laravel,intellij,sublimetext,visualstudio,visualstudiocode,composer
 
