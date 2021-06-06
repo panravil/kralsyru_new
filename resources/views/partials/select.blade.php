@@ -15,7 +15,7 @@
                                                     <a href="/parovani-syry/{{ $cheese->link }}">
                                                         <ul class="clearfix">
                                                             <li>
-                                                                <img src="{{ $cheese->img }}" alt="">
+                                                                <img src="{{ Voyager::image($cheese->img) }}" alt="">
                                                             </li>
                                                             @if( $cheese->id == 7 || $cheese->id == 9 || $cheese->id == 14)
                                                             <li><span>Král Sýrů {{ $cheese->title }}</span></li>
@@ -43,7 +43,7 @@
                                                 <span class="select-popup-item">
                                                     <a href="/parovani-vina/{{ $wine->link }}">
                                                         <ul class="clearfix">
-                                                            <li><img src="{{ $wine->img }}" alt=""></li>
+                                                            <li><img src="{{ Voyager::image($wine->img) }}" alt=""></li>
                                                             <li><span> {{ $wine->title }}</span></li>
                                                         </ul>
                                                     </a>

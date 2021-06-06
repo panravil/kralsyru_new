@@ -3,7 +3,7 @@
 
 @section('content')
     <div id="overlayPopup"></div>
-    <section class="header" style="background-image: url('{{$cover->cover}}');">
+    <section class="header" style="background-image: url('{{ Voyager::image($cover->cover) }}');">
 
         <div class="header__image-wrapper">
             <div class="crown"></div>

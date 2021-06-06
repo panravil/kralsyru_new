@@ -3,7 +3,7 @@
 
 @section('content')
     <div id="overlayPopup"></div>
-    <section class="header hp-mak" style="background-image: url('{{$cover->cover}}');">
+    <section class="header hp-mak" style="background-image: url('{{ Voyager::image($cover->cover) }}');">
 
 {{--        <div class="covervid-wrapper">--}}
 {{--            <video class="covervid-video" data-type="hp" autoplay loop muted poster="{{ asset('images/pribehchuti95/cover.jpg') }}">--}}
@@ -97,7 +97,7 @@
 
                     <div class="slide">
                         <div class="slide-content">
-                            <img src="{{ $cheese->img }}" alt="">
+                            <img src="{{ Voyager::image($cheese->img) }}" alt="">
                             <p>{{ ($cheese->id <= 6 ? 'Hermelín' : 'Král Sýrů') }}<br>{{ $cheese->title }}</p>
                             <span class="slide-img-hover">
                                 <a href="/nase-syry/{{ $cheese->link }}" class="btn btn-more">VÍCE</a>

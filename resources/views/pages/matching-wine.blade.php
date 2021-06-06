@@ -36,7 +36,7 @@
         </div>
         <div class="container-960">
             <div class="matching-wrapper-content">
-                <img class="" src="{{ $wine->img }}" alt="">
+                <img class="" src="{{ Voyager::image($wine->img) }}" alt="">
                 <h2>{{ $wine->title }}</h2>
                 <p class="text">{{ $wine->text }}</p>
             </div>

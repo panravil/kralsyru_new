@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <section  @if( $cheese->cover != '' ) class="header header-cheese-view" style="background: url('{{ $cheese->cover }}') no-repeat center center; background-size: cover;"
+    <section  @if( $cheese->cover != '' ) class="header header-cheese-view" style="background: url('{{ Voyager::image($cheese->cover) }}') no-repeat center center; background-size: cover;"
              @else class="header bcg-blue bcg-none" style="height: 380px !important; background: #0b386b url(../images/pattern-bottom.svg); background-size: 100px auto;" @endif>
 
 
@@ -157,7 +157,7 @@
 
                 @forelse ($cheese->package as $package)
                     <div class="packing-wrapper-one">
-                        <img src="{{ $package->img }}" alt="">
+                        <img src="{{ Voyager::image($package->img) }}" alt="">
                         <p>{{ $package->title }}</p>
                     </div>
                 @empty
@@ -169,7 +169,7 @@
                     @forelse ($cheese->package as $package)
                         <div class="packing-wrapper-img">
                             <div class="packing-content">
-                                <img src="{{ $package->img }}" alt="">
+                                <img src="{{ Voyager::image($package->img) }}" alt="">
                             </div>
                             <p>{{ $package->title }}</p>
                         </div>

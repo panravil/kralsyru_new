@@ -2,7 +2,7 @@
 @section('title', 'Král sýrů')
 
 @section('content')
-    <section class="header" style="background-image: url('{{$cover->cover}}');">
+    <section class="header" style="background-image: url('{{ Voyager::image($cover->cover) }}');">
         <div class="header-bg2-wrapper">
 
         </div>
@@ -48,7 +48,7 @@
 
                     <div class="slide">
                         <div class="slide-content">
-                            <img src="{{ $cheese->img }}" alt="">
+                            <img src="{{ Voyager::image($cheese->img) }}" alt="">
                             <p>Hermelín<br>{{ $cheese->title }}</p>
                         <span class="slide-img-hover">
                             <a href="/nase-syry/{{ $cheese->link }}" class="btn btn-more">VÍCE</a>
@@ -76,7 +76,7 @@
 
                     <div class="slide">
                         <div class="slide-content">
-                            <img src="{{ $cheese->img }}" alt="">
+                            <img src="{{ Voyager::image($cheese->img) }}" alt="">
                             <p>Král Sýrů<br>{{ $cheese->title }}</p>
                         <span class="slide-img-hover">
                             <a href="/nase-syry/{{ $cheese->link }}" class="btn btn-more">VÍCE</a>

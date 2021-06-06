@@ -23,7 +23,7 @@ class Cheese extends Model
 
 	public function package()
 	{
-		return $this->hasMany('App\Package', 'cheese_id', 'cheeses_id');
+		return $this->hasMany('App\Models\Package', 'cheese_id', 'cheeses_id');
 	}
 
 	protected $attributes = array(

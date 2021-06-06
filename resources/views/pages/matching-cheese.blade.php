@@ -41,7 +41,7 @@
 
         <div class="container-960">
             <div class="matching-wrapper-content">
-                <img class="" src="{{ $cheese->img }}" alt="">
+                <img class="" src="{{ Voyager::image($cheese->img) }}" alt="">
                 @if( $cheese->id == 7 || $cheese->id == 9 || $cheese->id == 14)
                         <h2>Král sýrů {{ $cheese->title }}</h2>
                     @else
