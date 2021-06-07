@@ -18,8 +18,6 @@ class ContactController extends Controller
 
 	public function sendForm(Request $request) {
 
-		$input = Request::all();
-
 		$this->validate($request, [
             'name' => 'required',
             'email' => 'required|email',
@@ -27,14 +25,16 @@ class ContactController extends Controller
             'g-recaptcha-response' => 'required|captcha',
         ]);
 
-	    Mail::send('partials.email', ['data' => $input], function($message) use ($input){
+		$input = $request;
+		
+	/*    Mail::send('partials.email', ['data' => $input], function($message) use ($input){
 	        $title = 'Dotaz z webu';
 	        $message->to('info@savencia-fd.info', 'Savencia')->subject($title);
 	        $message->from('info@kralsyru.cz', 'Král Sýrů');
 	    });
 
 	    //info@kralsyru.cz
-
+*/
         return '1';
 
 	}
