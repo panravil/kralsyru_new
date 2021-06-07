@@ -37,6 +37,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-W7QQ4LC');</script>
     <!-- End Google Tag Manager -->
+    {!! NoCaptcha::renderJs() !!}
 </head>
 <body class="{{ Request::segment(1) ? : 'home' }}">
     <!-- Google Tag Manager (noscript) -->

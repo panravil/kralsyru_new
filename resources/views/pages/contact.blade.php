@@ -61,6 +61,7 @@
 
                         <div class="contact-form-wrapper">
                             <form id="form" method="post" accept-charset="utf-8" action="/kontakt">
+                                {!! csrf_field() !!}
                                 <div class="form-group">
 
                                     <input name="name" class="form-control" data-validation="length" placeholder="Jméno a příjmení"
@@ -75,6 +76,19 @@
 
                                     <textarea name="message" class="form-control" cols="30" rows="8" id="text" data-validation="length" data-validation-length="min1" type="text" id="name" data-validation-error-msg="Tato položka je povinná" placeholder="Zpráva. V případě reklamace, uveďte prosím název výrobku, šarži a datum spotřeby."></textarea>
                                 </div>
+
+                                <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                                    <label class="col-md-4 control-label">Captcha</label>
+                                    <div class="col-md-12">
+                                        {!! app('captcha')->display() !!}
+                                        @if ($errors->has('g-recaptcha-response'))
+                                            <span class="help-block text-danger">
+                                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                
                                 <div class="form-group">
                                     <input class="btn-write-us" type="submit" value="Odeslat">
                                 </div>

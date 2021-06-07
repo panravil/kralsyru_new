@@ -16,8 +16,16 @@ class ContactController extends Controller
 
 	}
 
-	public function sendForm() {
+	public function sendForm(Request $request) {
+
 		$input = Request::all();
+
+		$this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required',
+            'g-recaptcha-response' => 'required|captcha',
+        ]);
 
 	    Mail::send('partials.email', ['data' => $input], function($message) use ($input){
 	        $title = 'Dotaz z webu';
