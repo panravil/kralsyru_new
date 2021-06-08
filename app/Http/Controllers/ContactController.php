@@ -30,7 +30,10 @@ class ContactController extends Controller
 	        'message' => $request['message'],
 	    ];
 		
-	    \Mail::to('panravil.dev@seznam.cz')->send(new \App\Mail\ContactMail($details));
+		// $to = 'info@savencia-fd.info';
+		$to = $request['email'];
+		
+	    \Mail::to($to)->send(new \App\Mail\ContactMail($details));
 
 	    //info@kralsyru.cz
 
