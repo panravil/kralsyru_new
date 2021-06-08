@@ -1,12 +1,8 @@
-public/
-public/css/
-#!/public/css/style.css
-/public/css/app.css
+/public/css/*
+!/public/css/styles.css
 
-public/js/
-#!/public/js/script.js
-/public/js/app.js
-/public/js/edit-page.js
+public/js/*
+!/public/js/main.js
 
 public/fonts
 
@@ -17,6 +13,9 @@ public/fonts
 /public/voyager-assets
 
 public/.htaccess
+
+public/pdf
+
 storage/app/
 storage/framework/
 storage/logs/

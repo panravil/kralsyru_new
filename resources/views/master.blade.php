@@ -38,6 +38,10 @@
     })(window,document,'script','dataLayer','GTM-W7QQ4LC');</script>
     <!-- End Google Tag Manager -->
     {!! NoCaptcha::renderJs() !!}
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.scrollbar.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery-migrate-1.2.1.min.js') }}"></script>
 </head>
 <body class="{{ Request::segment(1) ? : 'home' }}">
     <!-- Google Tag Manager (noscript) -->
@@ -99,10 +103,6 @@
       ga('send', 'pageview');
 
     </script>
-    <!-- <script type="text/javascript" src="{{ asset('js/jquery-1.11.0.min.js') }}"></script> -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.scrollbar.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery-migrate-1.2.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/form-validator.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/covervid.js') }}"></script>

@@ -82,8 +82,9 @@
                                     <div class="col-md-12">
                                         {!! app('captcha')->display() !!}
                                         @if ($errors->has('g-recaptcha-response'))
-                                            <span class="help-block text-danger">
-                                                <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                            <span class="help-block form-error">
+                                                <span>{{ $errors->first('g-recaptcha-response') }}</span>
+                                                {{-- <span>g-recaptcha-response error msg</span> --}}
                                             </span>
                                         @endif
                                     </div>
@@ -97,6 +98,10 @@
                             <div class="form-success">
                                 <h3>Zpráva byla odeslána. Děkujeme.</h3>
                             </div>
+
+                            <div id="pageloader">
+                                <img src="http://cdnjs.cloudflare.com/ajax/libs/semantic-ui/0.16.1/images/loader-large.gif" alt="processing..." />
+                             </div>
                         </div>
 
                     </div>

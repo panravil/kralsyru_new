@@ -10,7 +10,7 @@
             <h2>
                 SOUTĚŽ
             </h2>
-            <p><a target="_blank" href="{{ asset('vyherci-4.pdf') }}">Výherci</a></p>
+            <p><a target="_blank" href="{{ asset('pdf/vyherci-4.pdf') }}">Výherci</a></p>
             <p>
                 s Králem Sýrů o <span class="gold">60 poukazů</span> v hodnotě <span class="gold">5 000 Kč do Klenoty Aurum.</span>
             </p>
@@ -20,7 +20,7 @@
 
             <h2>PRAVIDLA</h2>
             <p>
-                Kompletní pravidla soutěže <a target="_blank" href="{{ asset('pravidla.pdf') }}">ke stažení</a>.
+                Kompletní pravidla soutěže <a target="_blank" href="{{ asset('pdf/pravidla.pdf') }}">ke stažení</a>.
             </p>
         </div>
 
