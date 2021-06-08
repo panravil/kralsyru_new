@@ -24,13 +24,13 @@ class ContactController extends Controller
             'g-recaptcha-response' => 'required|captcha',
         ]);
 
-		$input = $request;
+		$details = [
+	        'email' => $request['email'],
+	        'name' => $request['name'],
+	        'message' => $request['message'],
+	    ];
 		
-	    Mail::send('partials.email', ['data' => $input], function($message) use ($input){
-	        $title = 'Dotaz z webu';
-	        $message->to('info@savencia-fd.info', 'Savencia')->subject($title);
-	        $message->from('info@kralsyru.cz', 'Král Sýrů');
-	    });
+	    \Mail::to('panravil.dev@seznam.cz')->send(new \App\Mail\ContactMail($details));
 
 	    //info@kralsyru.cz
 
