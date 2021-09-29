@@ -2060,9 +2060,29 @@ h2.margin {
 }
 
 .nase-syry .header__image-wrapper h1 {
-    max-width: 570px;
-    margin: 25px auto;
+    max-width: 720px;
+    margin: 80px auto 25px auto;
     padding: 0;
+    position: relative;
+    font-family: initial;
+}
+
+.nase-syry .header__image-wrapper h1:after {
+    position: absolute;
+    content: '';
+    width: 50%;
+    border-bottom: 3px solid #fff;
+    bottom: -20px;
+    left: 25%;
+}
+
+.nase-syry .header__image-wrapper h2.subheadline {
+    max-width: 720px;
+    margin: 40px auto 25px auto;
+    padding: 0;
+    position: relative;
+    color: #fff;
+    font-family: initial;
 }
 
 .nase-syry .header {
@@ -2073,6 +2093,40 @@ h2.margin {
 .nase-syry .header__image-wrapper p {
     max-width: 450px;
     margin: auto;
+}
+
+.nase-syry .shops {
+    padding: 10px 0;
+    background: #fff;
+}
+
+.nase-syry .shops h2 {
+    margin: 30px auto 60px;
+    font-family: arial;
+    font-weight: bolder;
+}
+
+.nase-syry .shops .shop-items {
+    padding: 10px 20px;
+}
+
+.nase-syry .shops .shop-items .item {
+    display: inline-block;
+    width: 33%;
+    padding: 0 20px;
+}
+
+.nase-syry .shops .shop-items .item a {
+    text-decoration: none;
+}
+
+.nase-syry .shops .shop-items .item a img {
+    max-width: 80%;
+    max-height: 100px;
+}
+
+.nase-syry .shops .shop-items .item a p {
+    color: #ceb65f;
 }
 
 .nase-syry .button-back {

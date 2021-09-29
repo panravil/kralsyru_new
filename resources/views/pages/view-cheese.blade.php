@@ -8,15 +8,46 @@
 
 
         <div class="header__image-wrapper">
-            <div class="crown" @if( $cheese->cover == '' ) style="margin-top: 0" @endif ></div>
+            {{-- <div class="crown" @if( $cheese->cover == '' ) style="margin-top: 0" @endif ></div> --}}
             <div class="container-960">
 
-                <h1>
-                    {{ ($cheese->id <= 6 ? 'Hermelín' : 'Král Sýrů') }}<br>{{ $cheese->title }}
+                <h1 class="headline">
+                    {{ $cheese->headline }}
                 </h1>
+                
+                <h2 class="subheadline">
+                    {{ $cheese->subheadline }}
+                </h2>
 
             </div>
         </div>
+
+    </section>
+    <section class="shops">
+        <h2>Kde koupit?</h2>
+        <div class="shop-items container-960">
+            <div class="item">
+                <a href="{{ $cheese->shop_1_link }}">
+                    <img src="{{ Voyager::image($cheese->shop_1_logo) }}">
+                    <p>{{ $cheese->shop_1_text }}</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{{ $cheese->shop_2_link }}">
+                    <img src="{{ Voyager::image($cheese->shop_2_logo) }}">
+                    <p>{{ $cheese->shop_2_text }}</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="{{ $cheese->shop_3_link }}">
+                    <img src="{{ Voyager::image($cheese->shop_3_logo) }}">
+                    <p>{{ $cheese->shop_3_text }}</p>
+                </a>
+            </div>
+        </div>
+
+
+
 
     </section>
 
