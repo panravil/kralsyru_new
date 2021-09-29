@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/popup.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css?v=3') }}">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{Request::root()}}/{{ Request::path() }}">
     <meta property="og:site_name" content="Král sýrů">
@@ -107,6 +108,31 @@
     <script type="text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/covervid.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/main.js?v=3') }}"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+      window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "rgb(65, 54, 37)",
+              "text": "#ffffff"
+            },
+            "button": {
+              "background": "transparent",
+              "text": "#ffffff",
+              "border": "#ffffff"
+            }
+          },
+          "showLink": true,
+            "content": {
+                "message": "Tyto stránky používají cookies za účelem zkvalitňování služeb a analýzy návštěvnosti. Jejich prohlížením souhlasíte s užíváním cookies podle zásad uvedených v našich ",
+                "dismiss": "Souhlasím",
+                "link": "Podmínkách užití stránek.",
+                "href": "/pdf/20210701_MEMORANDUM_WEB_CZ.pdf"
+            }
+        })
+      });
+    </script>
     <script>
         $.validate();
     </script>
