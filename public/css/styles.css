@@ -166,6 +166,7 @@ h2.margin {
     z-index: 100;
     height: 70px;
     transition: all 0.3s ease-in-out;
+    top: 0;
 }
 
 .nav-down {
@@ -2061,10 +2062,10 @@ h2.margin {
 
 .nase-syry .header__image-wrapper h1 {
     max-width: 720px;
-    margin: 80px auto 25px auto;
+    margin: 0px auto 25px auto;
     padding: 0;
     position: relative;
-    font-family: initial;
+    font-size: 36px;
 }
 
 .nase-syry .header__image-wrapper h1:after {
@@ -2077,17 +2078,18 @@ h2.margin {
 }
 
 .nase-syry .header__image-wrapper h2.subheadline {
-    max-width: 720px;
-    margin: 40px auto 25px auto;
+    max-width: 540px;
+    margin: 30px auto 25px auto;
     padding: 0;
     position: relative;
     color: #fff;
-    font-family: initial;
+    font-size: 26px;
 }
 
 .nase-syry .header {
     background: url(../images/desktop-nase-syry.jpg) center center no-repeat;
     background-size: cover;
+    margin-top: 70px;
 }
 
 .nase-syry .header__image-wrapper p {
