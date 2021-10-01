@@ -1119,7 +1119,7 @@ h2.margin {
 }
 
 .header__image-wrapper .crown {
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 .header__image-wrapper .crown:before,
@@ -2060,7 +2060,12 @@ h2.margin {
     text-transform: uppercase;
 }
 
-.nase-syry .header__image-wrapper h1 {
+.nase-syry .header__image-wrapper h1.title {
+    max-width: 570px;
+    margin: 25px auto;
+}
+
+.nase-syry .header__image-wrapper h1.headline {
     max-width: 720px;
     margin: 0px auto 25px auto;
     padding: 0;
@@ -2068,7 +2073,7 @@ h2.margin {
     font-size: 36px;
 }
 
-.nase-syry .header__image-wrapper h1:after {
+.nase-syry .header__image-wrapper h1.headline:after {
     position: absolute;
     content: '';
     width: 50%;

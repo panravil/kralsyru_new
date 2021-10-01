@@ -8,48 +8,55 @@
 
 
         <div class="header__image-wrapper">
-            {{-- <div class="crown" @if( $cheese->cover == '' ) style="margin-top: 0" @endif ></div> --}}
-            <div class="container-960">
-
-                <h1 class="headline">
-                    {{ $cheese->headline }}
-                </h1>
-                
-                <h2 class="subheadline">
-                    {{ $cheese->subheadline }}
-                </h2>
-
-            </div>
+            @if ($cheese->new_design)
+                <div class="container-960">
+                    <h1 class="headline" @if (!$cheese->subheadline) style="margin-top:60px;"                       
+                    @endif>
+                        {{ $cheese->headline }}
+                    </h1>
+                    
+                    <h2 class="subheadline">
+                        {{ $cheese->subheadline }}
+                    </h2>
+                </div>
+            @else
+                <div class="crown" @if( $cheese->cover == '' ) style="margin-top: 0" @endif ></div>
+                <div class="container-960">
+                    <h1 class="title">
+                        {{ ($cheese->id <= 6 ? 'Hermelín' : 'Král Sýrů') }}<br>{{ $cheese->title }}
+                    </h1>
+                </div>
+            @endif
+              
         </div>
 
     </section>
-    <section class="shops">
-        <h2>Kde koupit?</h2>
-        <div class="shop-items container-960">
-            <div class="item">
-                <a href="{{ $cheese->shop_1_link }}">
-                    <img src="{{ Voyager::image($cheese->shop_1_logo) }}">
-                    <p>{{ $cheese->shop_1_text }}</p>
-                </a>
+    @if ($cheese->show_shops)
+        <section class="shops">
+            <h2>Kde koupit?</h2>
+            <div class="shop-items container-960">
+                <div class="item">
+                    <a href="{{ $cheese->shop_1_link }}">
+                        <img src="{{ Voyager::image($cheese->shop_1_logo) }}">
+                        <p>{{ $cheese->shop_1_text }}</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="{{ $cheese->shop_2_link }}">
+                        <img src="{{ Voyager::image($cheese->shop_2_logo) }}">
+                        <p>{{ $cheese->shop_2_text }}</p>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="{{ $cheese->shop_3_link }}">
+                        <img src="{{ Voyager::image($cheese->shop_3_logo) }}">
+                        <p>{{ $cheese->shop_3_text }}</p>
+                    </a>
+                </div>
             </div>
-            <div class="item">
-                <a href="{{ $cheese->shop_2_link }}">
-                    <img src="{{ Voyager::image($cheese->shop_2_logo) }}">
-                    <p>{{ $cheese->shop_2_text }}</p>
-                </a>
-            </div>
-            <div class="item">
-                <a href="{{ $cheese->shop_3_link }}">
-                    <img src="{{ Voyager::image($cheese->shop_3_logo) }}">
-                    <p>{{ $cheese->shop_3_text }}</p>
-                </a>
-            </div>
-        </div>
-
-
-
-
-    </section>
+        </section>
+    @endif
+    
 
     <section class="content matching-content">
 

@@ -14,17 +14,19 @@ class AddFieldsToCheeses extends Migration
     public function up()
     {
         Schema::table('cheeses', function (Blueprint $table) {
-            $table->string('headline', 250)->default('Král Sýrů');
-            $table->string('subheadline', 250)->default('');
-            $table->string('shop_1_logo', 250)->default('');
-            $table->string('shop_1_text', 250)->default('Albert');
-            $table->string('shop_1_link', 250)->default('');
-            $table->string('shop_2_logo', 250)->default('');
-            $table->string('shop_2_text', 250)->default('Globus');
-            $table->string('shop_2_link', 250)->default('');
-            $table->string('shop_3_logo', 250)->default('');
-            $table->string('shop_3_text', 250)->default('Tesco');
-            $table->string('shop_3_link', 250)->default('');
+            $table->boolean('new_design')->default(0);
+            $table->string('headline', 250)->nullable();
+            $table->string('subheadline', 250)->nullable();
+            $table->boolean('show_shops')->default(0);
+            $table->string('shop_1_logo', 250)->nullable();
+            $table->string('shop_1_text', 250)->nullable();
+            $table->string('shop_1_link', 250)->nullable();
+            $table->string('shop_2_logo', 250)->nullable();
+            $table->string('shop_2_text', 250)->nullable();
+            $table->string('shop_2_link', 250)->nullable();
+            $table->string('shop_3_logo', 250)->nullable();
+            $table->string('shop_3_text', 250)->nullable();
+            $table->string('shop_3_link', 250)->nullable();
         });
     }
 
@@ -36,8 +38,10 @@ class AddFieldsToCheeses extends Migration
     public function down()
     {
         Schema::table('cheeses', function (Blueprint $table) {
+            $table->dropColumn('new_design');
             $table->dropColumn('headline');
             $table->dropColumn('subheadline');
+            $table->dropColumn('show_shops');
             $table->dropColumn('shop_1_logo');
             $table->dropColumn('shop_1_text');
             $table->dropColumn('shop_1_link');
