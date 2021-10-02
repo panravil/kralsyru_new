@@ -82,3 +82,28 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 
+
+Route::get('/clear-cache', function() {
+	$exitCode = Artisan::call('cache:clear');
+	// return what you want
+});
+	
+Route::get('/clear-config', function() {
+	$exitCode = Artisan::call('config:clear');
+	// return what you want
+});
+	
+Route::get('/config-cache', function() {
+	$exitCode = Artisan::call('config:cache');
+	// return what you want
+});
+	
+Route::get('/optimize', function() {
+	$exitCode = Artisan::call('optimize');
+	// return what you want
+});
+		
+Route::get('/route-clear', function() {
+	$exitCode = Artisan::call('route:clear');
+	// return what you want
+});
