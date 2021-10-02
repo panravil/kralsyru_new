@@ -36,19 +36,19 @@
             <h2>Kde koupit?</h2>
             <div class="shop-items container-960">
                 <div class="item">
-                    <a href="{{ $cheese->shop_1_link }}">
+                    <a href="{{ $cheese->shop_1_link }}" target="_blank">
                         <img src="{{ Voyager::image($cheese->shop_1_logo) }}">
                         <p>{{ $cheese->shop_1_text }}</p>
                     </a>
                 </div>
                 <div class="item">
-                    <a href="{{ $cheese->shop_2_link }}">
+                    <a href="{{ $cheese->shop_2_link }}" target="_blank">
                         <img src="{{ Voyager::image($cheese->shop_2_logo) }}">
                         <p>{{ $cheese->shop_2_text }}</p>
                     </a>
                 </div>
                 <div class="item">
-                    <a href="{{ $cheese->shop_3_link }}">
+                    <a href="{{ $cheese->shop_3_link }}" target="_blank">
                         <img src="{{ Voyager::image($cheese->shop_3_logo) }}">
                         <p>{{ $cheese->shop_3_text }}</p>
                     </a>
