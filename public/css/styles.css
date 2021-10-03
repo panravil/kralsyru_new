@@ -2140,6 +2140,14 @@ h2.margin {
     color: #ceb65f;
 }
 
+@media screen and (max-width: 768px) {
+    .nase-syry .shops .shop-items .item {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
+
 .nase-syry .button-back {
     top: 110px;
 }
