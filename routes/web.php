@@ -107,3 +107,8 @@ Route::get('/route-clear', function() {
 	$exitCode = Artisan::call('route:clear');
 	// return what you want
 });
+		
+Route::get('/storage-link', function() {
+	$exitCode = Artisan::call('storage:link');
+	// return what you want
+});
