@@ -94,7 +94,11 @@
                                     <input class="btn-write-us" type="submit" value="Odeslat">
                                 </div>
                             </form>
-
+                            <div class="gdpr-info">
+                                <span>Informace o zpracování osobních údajů a využití cookies naleznete </span>
+                                <span><a href="{{ asset('/pdf/20210701_MEMORANDUM_WEB_CZ.pdf')}}" target="_blank">zde</a></span>
+                                <span>.</span>
+                            </div>
                             <div class="form-success">
                                 <h3>Zpráva byla odeslána. Děkujeme.</h3>
                             </div>
