@@ -223,4 +223,17 @@
 
 
     @include('partials.footer')
+    @section('scripts')
+    <script>
+        $(document).on('click', '.shop-items .item a' , function() {
+            console.log($(this).attr('href'));
+            ga('send', 'event', {
+                eventCategory: 'Outbound Link',
+                eventAction: 'click',
+                eventLabel: $(this).attr('href')
+            });
+        });
+
+    </script>
+    @endsection
  @endsection
